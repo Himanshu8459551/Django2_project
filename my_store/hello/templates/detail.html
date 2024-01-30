@@ -1,0 +1,19 @@
+{% extends 'my.html' %}
+{% load static %}
+
+<head><link rel="stylesheet" href="{% static 'style.css' %}"></head>   
+
+{% block body %}
+<img src="{{mybook.image.url}}">
+<h1>{{ mybook.titel }} 
+    {{ mybook.description }}
+</h1>
+
+<p>
+    {{ mybook.price }}
+</p>    
+
+<a class="btn btn-warning" href="update/{{mybook.id }}">update</a>
+<a class="btn btn-warning" href="delete/{{mybook.id }}">delete</a>
+
+{% endblock %}
